@@ -1,0 +1,217 @@
+* { box-sizing: border-box; }
+
+body {
+  background-color: #40407A; margin: 0;
+  color: #40407A;
+  font-family: "sans-serif";
+}
+
+nav {
+  background-color: white;
+  position: fixed;
+  top: 0; left: 0; z-index: 9999; width: 100%; height: auto;
+  padding-right: 0;
+  text-align: right;
+}
+
+.Wrapper {
+  background-color: #F5F5F5; padding: 4em;
+}
+
+h1 {
+  color: white;
+  background-color: #40407A;
+  background-image: url(Assets/sunrise.jpg);
+  background-size: 100% 100%;
+  margin-top: 40px; margin-bottom: 0;
+  font-size: 200%;
+  min-height: 200px;
+  transition: color 2s;
+  transition-timing-function: ease-out;
+}
+
+h1:hover {
+  color: #8F92B2;
+
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 1em;
+}
+
+ul {
+  margin: .5em; padding-right: 1em;
+  font-size: 1.2em;
+}
+
+nav li {
+  display: inline;
+  width: 30%;
+  padding-left: 1em;
+}
+
+a {
+  font-size: large;
+  text-decoration: none;
+  color: gray; background-color: transparent;
+}
+
+p {
+  margin: 1em;
+}
+
+section {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+footer {
+  float: right;
+  text-align: center; 
+  font-size: small; font-style: italic;
+}
+
+.Home {
+  height: 20vh;
+  padding-top: 2em; padding-left: 10%;
+  font-size: 150%;
+}
+
+.Content {
+  height: 20vh;
+  padding-top: 6em; padding-left: 10%;
+  font-size: 150%;
+}
+
+.Mathero {
+  height: 300px;
+  background-image: url(Assets/yoga.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.Loungehero {
+  height: 300px;
+  background-image: url(Assets/class.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+#flow {
+  display: block;
+  justify-content: center;
+}
+
+/* Tables */
+table {
+  border: 1px #40407A;
+  margin-bottom: 1em;
+  min-width: 400px;
+  border-collapse: collapse;
+}
+
+td , th {
+  padding: 0.5em;
+  border: 1px solid #40407A;
+}
+
+.CaptionStyle {
+  margin: 1em;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #D7E8E9;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+input, datalist textarea {margin-bottom: .5em;}
+
+/* Stylings & Media Queries */
+
+a:hover{color: #8F92B2}
+
+:link { color: #3F2960}
+
+:visited {color: #497777}
+
+audio {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 120%;
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  nav li {
+    width: 7em;
+  }
+  section {
+    padding-left: 2em; padding-right: 2rem;
+  }
+  .Mathero {
+    display: block;
+    padding-bottom: 1em;
+  }
+  .Loungehero {
+    display: block;
+    padding-bottom: 1em;
+  }
+
+  form {
+    display: grid; grid-gap: 1em;
+    grid-template-columns: 9em 1fr;
+    grid-template-rows: auto;
+    width: 60%; max-width: 40em;
+  }
+
+  #submit {
+    grid-column: 2;
+    width: 9em;
+  }
+
+  #flow {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 220%;
+  }
+  nav {
+    font-weight: bold;
+  }
+  .home {
+    height: 50vh;
+    padding-top: 5em; padding-left: 8em;
+  }
+  .Content {
+    height: 30vh;
+    padding-top: 2em; padding-left: 8em;
+  }
+  .Wrapper {
+    margin: auto; 
+    width: 80%;
+  }
+  #flow {
+    display: flex;
+    flex-flow: column;
+  }
+}
